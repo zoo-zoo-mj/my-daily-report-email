@@ -22,14 +22,14 @@ jobs:
           # smtp server port
           smtp-server-port: 465
           # auth user
-          auth-user:  ${{ secrets.MAIL_USER }}
+          auth-user:  jujuaditya037@gmail.com
           # auth password
-          auth-password: ${{ secrets.MAIL_PASSWORD }}
+          auth-password: Aditya@039
           # mail subject
           subject: message email check
           # The message to be sended
           body: 1234
           # where is the message from
-          from: ${{ secrets.DAILY_REPORT_FROM }}
+          from: jujuaditya037@gmail.com
           # Who to send
-          to: ${{ secrets.DAILY_REPORT_TO }}
+          to: jujuaditya037@gmail.com
