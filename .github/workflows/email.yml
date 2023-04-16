@@ -1,4 +1,4 @@
-name: Report
+name: Report email test
 
 on:
   schedule:
