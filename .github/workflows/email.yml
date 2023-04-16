@@ -15,32 +15,21 @@ jobs:
   report:
     runs-on: ubuntu-latest
     steps:
-#       - uses: actions/checkout@v2
-
-#       - uses: actions/setup-node@v1
-#         with:
-#           node-version: 12
-
-#       - run: yarn install --frozen-lockfile
-
-#       - run: node src/main.js
-      
-    - name: send email action
-    uses: AlexisMateo/sendmail-action@5
-    with:
-      # smtp server
-      smtp-server: 'smtp.gmail.com'
-      # smtp server port
-      smtp-server-port: 465
-      # auth user
-      auth-user:  ${{ secrets.MAIL_USER }}
-      # auth password
-      auth-password: ${{ secrets.MAIL_PASSWORD }}
-      # mail subject
-      subject: message email check
-      # The message to be sended
-      body: 1234
-      # where is the message from
-      from: ${{ secrets.DAILY_REPORT_FROM }}
-      # Who to send
-      to: ${{ secrets.DAILY_REPORT_TO }}
+      - uses: AlexisMateo/sendmail-action@5
+        with:
+          # smtp server
+          smtp-server: 'smtp.gmail.com'
+          # smtp server port
+          smtp-server-port: 465
+          # auth user
+          auth-user:  ${{ secrets.MAIL_USER }}
+          # auth password
+          auth-password: ${{ secrets.MAIL_PASSWORD }}
+          # mail subject
+          subject: message email check
+          # The message to be sended
+          body: 1234
+          # where is the message from
+          from: ${{ secrets.DAILY_REPORT_FROM }}
+          # Who to send
+          to: ${{ secrets.DAILY_REPORT_TO }}
